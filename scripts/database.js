@@ -2,57 +2,57 @@
 
 const database = {
     facilities: [
-        {id: 1, name: "Hostess", status: true, colonyId: 1 },
-        {id: 2, name: "Little Debbie", status: false, colonyId: 2 },
-        {id: 3, name: "Sara Lee", status: true, colonyId: 3 },
-        {id: 4, name: "Entenmann's", status: false, colonyId: 1 },
-        {id: 5, name: "Mini Muffin", status: false, colonyId: 2 },
-        {id: 6, name: "Chicken Pot Pie", status: false, colonyId: 3 }
+        { id: 1, name: "Hostess", status: true, colonyId: 1 },
+        { id: 2, name: "Little Debbie", status: false, colonyId: 2 },
+        { id: 3, name: "Sara Lee", status: true, colonyId: 3 },
+        { id: 4, name: "Entenmann's", status: false, colonyId: 1 },
+        { id: 5, name: "Mini Muffin", status: false, colonyId: 2 },
+        { id: 6, name: "Chicken Pot Pie", status: false, colonyId: 3 }
     ],
     facilityMineral: [
-        {id: 1, amount: 10000, mineralId: 1, facilityId: 1},
-        {id: 2, amount: 12000, mineralId: 2, facilityId: 2},
-        {id: 3, amount: 8000, mineralId: 3, facilityId: 3},
-        {id: 4, amount: 15000, mineralId: 4, facilityId: 4},
-        {id: 5, amount: 13000, mineralId: 5, facilityId: 5},
-        {id: 6, amount: 5000, mineralId: 6, facilityId: 6},
-        {id: 7, amount: 1500, mineralId: 7, facilityId: 1},
-        {id: 8, amount: 1800, mineralId: 8, facilityId: 2},
-        {id: 9, amount: 27500, mineralId: 9, facilityId: 3},
-        {id: 10, amount: 100000, mineralId: 10, facilityId: 4},
-        {id: 11, amount: 22000, mineralId: 11, facilityId: 5},
-        {id: 12, amount: 500, mineralId: 12, facilityId: 6}
+        { id: 1, amount: 10000, mineralId: 1, facilityId: 1 },
+        { id: 2, amount: 12000, mineralId: 2, facilityId: 2 },
+        { id: 3, amount: 8000, mineralId: 3, facilityId: 3 },
+        { id: 4, amount: 15000, mineralId: 4, facilityId: 4 },
+        { id: 5, amount: 13000, mineralId: 5, facilityId: 5 },
+        { id: 6, amount: 5000, mineralId: 6, facilityId: 6 },
+        { id: 7, amount: 1500, mineralId: 7, facilityId: 1 },
+        { id: 8, amount: 1800, mineralId: 8, facilityId: 2 },
+        { id: 9, amount: 27500, mineralId: 9, facilityId: 3 },
+        { id: 10, amount: 100000, mineralId: 10, facilityId: 4 },
+        { id: 11, amount: 22000, mineralId: 11, facilityId: 5 },
+        { id: 12, amount: 500, mineralId: 12, facilityId: 6 }
     ],
     governors: [
-        {id: 1, name: "Ding-Dong", colonyId: 1, },
-        {id: 2, name: "Twinkie", colonyId: 2, },
-        {id: 3, name: "Nutter-Butter", colonyId: 3, },
-        {id: 4, name: "Snowball", colonyId: 3, },
-        {id: 5, name: "ho-hos",colonyId: 1, },
-        {id: 6, name: "Cosmic-Brownies", colonyId: 2, }
+        { id: 1, name: "Ding-Dong", colonyId: 1, },
+        { id: 2, name: "Twinkie", colonyId: 2, },
+        { id: 3, name: "Nutter-Butter", colonyId: 3, },
+        { id: 4, name: "Snowball", colonyId: 3, },
+        { id: 5, name: "ho-hos", colonyId: 1, },
+        { id: 6, name: "Cosmic-Brownies", colonyId: 2, }
     ],
     colonies: [
-        {id: 1, name: "Tatooine"},
-        {id: 2, name: "Death Star"},
-        {id: 3, name: "Dagobah"},
-        {id: 4, name: "Alderaan"},
-        {id: 5, name: "Bespin"},
-        {id: 6, name: "Endor"}
+        { id: 1, name: "Tatooine" },
+        { id: 2, name: "Death Star" },
+        { id: 3, name: "Dagobah" },
+        { id: 4, name: "Alderaan" },
+        { id: 5, name: "Bespin" },
+        { id: 6, name: "Endor" }
     ],
     minerals: [
-        { id: 1, type: "gold"},
-        { id: 2, type: "silver"},
-        { id: 3, type: "mercury"},
-        { id: 4, type: "hermatite"},
-        { id: 5, type: "goethite"},
-        { id: 6, type: "pyrite"},
-        { id: 7, type: "galena"}, 
-        { id: 8, type: "sphalerite"}, 
-        { id: 9, type: "baryte"}, 
-        { id: 10, type: "quartz"} 
+        { id: 1, type: "gold" },
+        { id: 2, type: "silver" },
+        { id: 3, type: "mercury" },
+        { id: 4, type: "hermatite" },
+        { id: 5, type: "goethite" },
+        { id: 6, type: "pyrite" },
+        { id: 7, type: "galena" },
+        { id: 8, type: "sphalerite" },
+        { id: 9, type: "baryte" },
+        { id: 10, type: "quartz" }
     ],
     purchasedMinerals: [
-        {id: 1, conlonyId: 1, mineralId: 1, amountPurchased: 1 }
+        { id: 1, conlonyId: 1, mineralId: 1, amountPurchased: 1 }
     ],
     transientState: {},
 }
@@ -61,37 +61,33 @@ const database = {
 
 
 export const getFacilities = () => {
-    return database.facilities.map(facility => ({...facility}))
+    return database.facilities.map(facility => ({ ...facility }))
 }
 
 
 export const getFacilityMineral = () => {
-    return database.facilityMineral.map(fMineral => ({...fMineral}))
+    return database.facilityMineral.map(fMineral => ({ ...fMineral }))
 }
 
 
 export const getGovernors = () => {
-    return database.governors.map(governor => ({...governor}))
+    return database.governors.map(governor => ({ ...governor }))
 }
 
 
 export const getColonies = () => {
-    return database.colonies.map(colony => ({...colony}))
+    return database.colonies.map(colony => ({ ...colony }))
 }
 
 
 export const getMinerals = () => {
-    return database.minerals.map(mineral => ({...mineral}))
+    return database.minerals.map(mineral => ({ ...mineral }))
 }
 
-
-export const setFacility = (facilityId) => {
-    database.transientState.selectedFacility = facilityId
-    document.dispatchEvent(new CustomEvent("stateChanged"))
-}
-
-
-
+// export const setFacility = (facilityId) => {
+//     database.transientState.selectedFacility = facilityId
+//     document.dispatchEvent(new CustomEvent("stateChanged"))
+// }
 
 // export const purchaseMineral = () => {
 
@@ -100,7 +96,7 @@ export const setFacility = (facilityId) => {
 //         document.dispatchEvent( new CustomEvent("stateChanged") )
 //     }
 // }
-    
+
 
 
 
