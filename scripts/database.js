@@ -1,5 +1,6 @@
 const database = {
- governors: [
+// governors array with properties
+    governors: [
         {id: 1, name: "Ding-Dong", colonyId: 1, },
         {id: 2, name: "Twinkie", colonyId: 2, },
         {id: 3, name: "Nutter-Butter", colonyId: 3, },
@@ -26,7 +27,7 @@ export const purchaseMineral = () => {
         document.dispatchEvent( new CustomEvent("stateChanged") )
     }
 }
-
+// export getGovernors allows governors to be accessed from other modules
 export const getGovernors = () => {
     return database.governors.map(governor => ({...governor}))
 }
