@@ -1,3 +1,5 @@
+//* Facilities arrays and properties 
+
 const database = {
     transientState: {},
     facilities: [
@@ -29,9 +31,13 @@ const database = {
 //     document.dispatchEvent( new CustomEvent("stateChanged") )
 // }
 
+//* Export allows access to facilities array from other modules.
+
 export const getFacilities = () => {
     return database.facilities.map(fecility => ({...fecility}))
 }
+
+//* Export allows access to facilityMineral array from other modules.
 
 export const getFacilityMineral = () => {
     return database.facilityMineral.map(fMineral => ({...fMineral}))
