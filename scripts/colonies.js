@@ -1,4 +1,4 @@
-import { getColonies, getGovernors } from "./database.js"
+import { getColonies, getGovernors, getMinerals, getTransState } from "./database.js"
 
 const colonies = getColonies()
 const governors = getGovernors()
@@ -15,13 +15,22 @@ const governors = getGovernors()
 export const colonyChoices = () => {
     let html = ""
 
-    let getColony = getGovernors()
-
+    let getGovernor = getGovernors()
+    let getMineral = getMinerals()
+    const state = getTransState()
+    
+    const foundGovernorObj = getGovernor.find(
+        (governorObj) => {
+           return governorObj.id === state.governorId
+        }
+ 
+    )
+debugger
     for (const colony of colonies) {
-        if (colony.id === getColony.colonyId) {
-            return `${colony.name}`
+        if (colony.id === foundGovernorObj.colonyId) {
+            html += `${colony.name}`
         } else {
-            return "Colony Minerals"
+            html += `"Colony Minerals"`
         }
     }
 

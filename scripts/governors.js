@@ -1,19 +1,20 @@
 // imports the array governors from the database
 import { getGovernors, setGovernors } from "./database.js"
+import { colonyChoices } from "./colonies.js"
 // State variable (copy of the data)
 const governors = getGovernors()
 
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "governor") {
+        if (event.target.id === "governors") {
             setGovernors(parseInt(event.target.value))
         }
     }
 )
 
 
-export const governorChoices = () => {
+export const governorList = () => {
     let html = "<h2>Governors</h2>"
 
     html += `<select id="governors">`

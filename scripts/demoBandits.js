@@ -1,11 +1,20 @@
 //
 import { colonyChoices } from "./colonies.js"
 import { facilityChoices } from "./facilities.js"
-import { governorChoices } from "./governors.js"
+import { governorList } from "./governors.js"
 import {  } from "./facilityMineral.js"
 import {  } from "./purchasedMinerals.js"
 import { chooseMinerals } from "./Minerals.js"
 
+
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         if (event.target.name === "governor") {
+//             colonyChoices()
+//         }
+//     }
+// )
 
 export const demoBandits = () => {
     return `
@@ -15,8 +24,8 @@ export const demoBandits = () => {
         <legend>Mine Your Mineral</legend>
     
         <article class="dropdownMenus">
-            <section>
-                ${governorChoices()}
+            <section name="governor">
+                ${governorList()}
             </section>
             <section>
                 ${facilityChoices()}
