@@ -78,13 +78,20 @@ export const getMinerals = () => {
     return database.minerals.map(mineral => ({ ...mineral }))
 }
 
+export const getTransState = () => {
+    return { ...database.transientState }
+}
+
 export const setFacilities = (id) => {
     database.transientState.facilityId = id
 }
 
 export const setGovernors = (id) => {
     database.transientState.governorId = id
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
+
+
 
 export const setMinerals = (id) => {
     database.transientState.mineralId = id
