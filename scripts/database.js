@@ -28,7 +28,7 @@ const database = {
         { id: 2, name: "Twinkie", colonyId: 2, },
         { id: 3, name: "Nutter-Butter", colonyId: 3, },
         { id: 4, name: "Snowball", colonyId: 3, },
-        { id: 5, name: "ho-hos", colonyId: 1, },
+        { id: 5, name: "Ho-Hos", colonyId: 1, },
         { id: 6, name: "Cosmic-Brownies", colonyId: 2, }
     ],
     colonies: [
@@ -40,21 +40,21 @@ const database = {
         { id: 6, name: "Endor" }
     ],
     minerals: [
-        { id: 1, type: "gold" },
-        { id: 2, type: "silver" },
-        { id: 3, type: "mercury" },
-        { id: 4, type: "hermatite" },
-        { id: 5, type: "goethite" },
-        { id: 6, type: "pyrite" },
-        { id: 7, type: "galena" },
-        { id: 8, type: "sphalerite" },
-        { id: 9, type: "baryte" },
-        { id: 10, type: "quartz" }
+        { id: 1, type: "Gold" },
+        { id: 2, type: "Silver" },
+        { id: 3, type: "Mercury" },
+        { id: 4, type: "Hermatite" },
+        { id: 5, type: "Goethite" },
+        { id: 6, type: "Pyrite" },
+        { id: 7, type: "Galena" },
+        { id: 8, type: "Sphalerite" },
+        { id: 9, type: "Baryte" },
+        { id: 10, type: "Quartz" }
     ],
     purchasedMinerals: [
-        { id: 1, conlonyId: 1, mineralId: 1, amountPurchased: 1 }
+        { id: 1, conlonyId: 1, mineralId: 1, facilityId: 1, governorId: 2, amountPurchased: 1 }
     ],
-    transientState: {},
+    transientState: { },
 }
 
 export const getFacilities = () => {
@@ -79,6 +79,18 @@ export const getColonies = () => {
 
 export const getMinerals = () => {
     return database.minerals.map(mineral => ({ ...mineral }))
+}
+
+export const setFacilities = (id) => {
+    database.transientState.facilityId = id
+}
+
+export const setGovernors = (id) => {
+    database.transientState.governorId = id
+}
+
+export const setMinerals = (id) => {
+    database.transientState.mineralId = id
 }
 
 // export const setFacility = (facilityId) => {
