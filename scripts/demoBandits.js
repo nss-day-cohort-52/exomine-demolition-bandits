@@ -1,31 +1,32 @@
 //
-import {} from "./colonies.js"
-import {} from "./facilities.js"
-import {} from "./governors.js"
-import {} from "./facilityMineral.js"
-import {} from "./purchasedMinerals.js"
-import {} from "./Minerals.js"
+import {  } from "./colonies.js"
+import { facilityChoices } from "./facilities.js"
+import { governorChoices } from "./governors.js"
+import {  } from "./facilityMineral.js"
+import {  } from "./purchasedMinerals.js"
+import { chooseMinerals } from "./Minerals.js"
 
 
 export const demoBandits = () => {
     return `
         <h1>Demo Bandits Space Shop</h1>
             
+        <fieldset>
+        <legend>Mine Your Mineral</legend>
+    
         <article class="dropdownMenus">
             <section>
-                <h2>Choose a Governor</h2>
-                $ {}
+                ${governorChoices()}
             </section>
             <section>
-                <h2>Choose a Colony</h2>
-                $ {}
+                ${facilityChoices()}
             </section>
         </article>
 
         <article class="minerals">
             <section>
                 <h2>Minerals</h2>
-                $ {}
+                ${chooseMinerals()}
             </section>
         </article>
 
@@ -34,7 +35,7 @@ export const demoBandits = () => {
                 <h2>Facility Minerals</h2>
                 $ {}
             </section>
-        </article>
+        </article></fieldset>
 
         <article class="cart">
             <section>
