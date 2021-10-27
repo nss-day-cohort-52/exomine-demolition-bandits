@@ -1,5 +1,5 @@
 //
-import {  } from "./colonies.js"
+import { colonyChoices } from "./colonies.js"
 import { facilityChoices } from "./facilities.js"
 import { governorChoices } from "./governors.js"
 import {  } from "./facilityMineral.js"
@@ -36,6 +36,12 @@ export const demoBandits = () => {
                 $ {}
             </section>
         </article></fieldset>
+
+        <article class="colonies">
+            <section>
+                <h2>Colonies</h2>
+                ${colonyChoices()}
+            </section></article>
 
         <article class="cart">
             <section>

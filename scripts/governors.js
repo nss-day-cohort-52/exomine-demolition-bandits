@@ -12,6 +12,7 @@ document.addEventListener(
     }
 )
 
+
 export const governorChoices = () => {
     let html = "<h2>Governors</h2>"
 
