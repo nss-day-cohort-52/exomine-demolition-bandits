@@ -35,9 +35,6 @@ const database = {
         { id: 1, name: "Tatooine" },
         { id: 2, name: "Death Star" },
         { id: 3, name: "Dagobah" },
-        { id: 4, name: "Alderaan" },
-        { id: 5, name: "Bespin" },
-        { id: 6, name: "Endor" }
     ],
     minerals: [
         { id: 1, type: "Gold" },
@@ -92,6 +89,10 @@ export const setGovernors = (id) => {
 export const setMinerals = (id) => {
     database.transientState.mineralId = id
 }
+
+// export const setColonies = (id) => {
+//     database.transientState.colonyId = id
+// }
 
 // export const setFacility = (facilityId) => {
 //     database.transientState.selectedFacility = facilityId
