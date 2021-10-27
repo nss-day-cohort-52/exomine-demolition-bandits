@@ -57,9 +57,6 @@ const database = {
     transientState: {},
 }
 
-
-
-
 export const getFacilities = () => {
     return database.facilities.map(facility => ({ ...facility }))
 }

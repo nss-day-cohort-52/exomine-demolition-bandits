@@ -1,7 +1,7 @@
 @import "details.css";
-/* @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One"); */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-/* Typography
+Typography
 
 body,
 button,
@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 ul {
     list-style-type: none;
     padding-inline-start: 0.25rem;
-} */
+}
 
 #orderButton {
     margin: 1rem 0 2rem 2rem;
