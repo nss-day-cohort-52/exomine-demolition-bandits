@@ -1,4 +1,4 @@
-import { getMinerals, setMinerals } from './database.js'
+import { getMinerals,  } from './database.js'
 
 
 const minerals = getMinerals() // declare a const variabel and assign to it the value of the getMinerals() function
