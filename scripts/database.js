@@ -86,11 +86,11 @@ export const setFacilities = (id) => {
     database.transientState.facilityId = id
 }
 
+
 export const setGovernors = (id) => {
     database.transientState.governorId = id
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
-
 
 
 export const setMinerals = (id) => {
