@@ -5,6 +5,7 @@ import { governorList } from "./governors.js"
 import { } from "./facilityMineral.js"
 import { } from "./purchasedMinerals.js"
 import { chooseMinerals } from "./Minerals.js"
+import { mineralSelection} from "./purchasedMinerals.js"
 
 
 document.addEventListener(
@@ -37,8 +38,7 @@ export const demoBandits = () => {
                 <h2>Facility Minerals</h2>
                 ${chooseMinerals()}
             </section>
-
-        </article></fieldset></div>
+        </article></fieldset>
 
         <div><fieldset class="fieldset-set-right">
         <legend><h2>Purchase Your Mineral</h2></legend>
