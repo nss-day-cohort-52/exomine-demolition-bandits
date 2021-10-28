@@ -24,7 +24,7 @@ export const demoBandits = () => {
         <legend>Mine Your Mineral</legend>
     
         <article class="dropdownMenus">
-            <section name="governor">
+            <section id="governor">
                 ${governorList()}
             </section>
             <section>
@@ -37,6 +37,9 @@ export const demoBandits = () => {
                 <h2>Minerals</h2>
                 ${chooseMinerals()}
             </section>
+
+        </article>
+            <button id="Space Cart">Purchase Mineral</button>
         </article>
 
         <article class="radioMinerals>
