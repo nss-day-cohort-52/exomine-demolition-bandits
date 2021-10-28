@@ -7,14 +7,14 @@ import {  } from "./purchasedMinerals.js"
 import { chooseMinerals } from "./Minerals.js"
 
 
-// document.addEventListener(
-//     "change",
-//     (event) => {
-//         if (event.target.name === "governor") {
-//             colonyChoices()
-//         }
-//     }
-// )
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "governor") {
+            colonyChoices()
+        }
+    }
+)
 
 export const demoBandits = () => {
     return `

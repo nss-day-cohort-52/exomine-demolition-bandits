@@ -1,9 +1,9 @@
 // imports the array governors from the database
-import { getGovernors, setGovernors } from "./database.js"
+import { getGovernors, setGovernors, getTransState } from "./database.js"
 import { colonyChoices } from "./colonies.js"
 // State variable (copy of the data)
 const governors = getGovernors()
-
+const state = getTransState()
 document.addEventListener(
     "change",
     (event) => {
