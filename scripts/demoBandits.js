@@ -24,7 +24,7 @@ export const demoBandits = () => {
         <legend><h2>Choose Your Mineral</h2></legend>
     
         <article class="dropdownMenus">
-            <section name="governor">
+            <section id="governor">
                 ${governorList()}
             </section>
             <section>
@@ -37,7 +37,21 @@ export const demoBandits = () => {
                 <h2>Minerals</h2>
                 ${chooseMinerals()}
             </section>
+<<<<<<< HEAD
         </article></fieldset></div>
+=======
+
+        </article>
+            <button id="Space Cart">Purchase Mineral</button>
+        </article>
+
+        <article class="radioMinerals>
+            <section>
+                <h2>Facility Minerals</h2>
+                $ {}
+            </section>
+        </article></fieldset>
+>>>>>>> main
 
         <div><fieldset class="fieldset-set-right">
         <legend><h2>Purchase Your Mineral</h2></legend>
