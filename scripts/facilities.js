@@ -7,19 +7,15 @@ const facilities = getFacilities()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "facility") {
+        if (event.target.id === "facilities") {
             setFacilities(parseInt(event.target.value))
         }
     }
 )
 
 export const facilityChoices = () => {
-
-    let html = "<h2>Choose a facility</h2>"
-
     const state = getTransState()
     let html = "<h2>Facilities</h2>"
-
 
     html += `<select id="facilities" value="${state.facilityId}>`
     html += `<option value="0">Select A Facility...</option>`
@@ -29,4 +25,5 @@ export const facilityChoices = () => {
     }
         html += "</select>"
     return html
+
 }

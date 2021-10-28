@@ -9,7 +9,7 @@ const database = {
         { id: 5, name: "Mini Muffin", status: false, colonyId: 2 },
         { id: 6, name: "Chicken Pot Pie", status: false, colonyId: 3 }
     ],
-    facilityMineral: [
+    facilityMinerals: [
         { id: 1, amount: 10000, mineralId: 1, facilityId: 1 },
         { id: 2, amount: 12000, mineralId: 2, facilityId: 2 },
         { id: 3, amount: 8000, mineralId: 3, facilityId: 3 },
@@ -49,7 +49,7 @@ const database = {
         { id: 10, type: "Quartz" }
     ],
     purchasedMinerals: [
-        { id: 1, conlonyId: 1, mineralId: 1, facilityId: 1, governorId: 2, amountPurchased: 1 }
+        { id: 1, colonyId: 1, mineralId: 1, facilityId: 1, governorId: 2, amountPurchased: 1 }
     ],
     transientState: { },
 }
@@ -59,8 +59,8 @@ export const getFacilities = () => {
 }
 
 
-export const getFacilityMineral = () => {
-    return database.facilityMineral.map(fMineral => ({ ...fMineral }))
+export const getFacilityMinerals = () => {
+    return database.facilityMinerals.map(fMineral => ({ ...fMineral }))
 }
 
 
@@ -96,6 +96,7 @@ export const setGovernors = (id) => {
 
 export const setMinerals = (id) => {
     database.transientState.mineralId = id
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
 export const setColonies = (id) => {
