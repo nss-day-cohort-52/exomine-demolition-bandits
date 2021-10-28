@@ -15,16 +15,16 @@ document.addEventListener(
 // exporting/declaring colonyChoices
 export const colonyChoices = () => {
 
-// declaring the getGovernor var to return a list of governors
-// by executing the function getGovernor
+  // declaring the getGovernor var to return a list of governors
+  // by executing the function getGovernor
     let getGovernor = getGovernors()
 
-//declaring the getMinerals var to return a list of minerals 
-// by executing the function getMinerals
+  //declaring the getMinerals var to return a list of minerals 
+  // by executing the function getMinerals
     let getMineral = getMinerals()
 
-    //declaring the getMinerals var to return a list of minerals 
-// by executing the function getMinerals
+    //declaring the state var to return a list of transState 
+   // by executing the function getTransState
     const state = getTransState()
     
     //declaring var for finding governor. 
