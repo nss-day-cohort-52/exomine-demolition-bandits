@@ -3,6 +3,7 @@ import { getGovernors, setGovernors, getTransState } from "./database.js"
 
 // State variable (copy of the data)
 const governors = getGovernors()
+
 document.addEventListener(
     "change",
     (event) => {
@@ -10,21 +11,14 @@ document.addEventListener(
             setGovernors(parseInt(event.target.value))
         }
     }
-
-)
-
-
-
-    
-
+    )
     
     
     export const governorList = () => {
         const state = getTransState()
-        let html = "<h2>Choose a governors</h2>"
+        let html = "<h2>Governors</h2>"
         
     html += `<select id="governors" value="${state.governorId}">`
-
     html += `<option value="0">Select A Governor...</option>`
 
         for (const governor of governors) {
