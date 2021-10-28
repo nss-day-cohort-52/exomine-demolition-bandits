@@ -25,4 +25,5 @@ export const facilityChoices = () => {
     }
         html += "</select>"
     return html
+
 }

@@ -3,7 +3,7 @@ import { demoBandits } from "./demoBandits.js"
 const mainContainer = document.querySelector("#container")
 
 const renderAllHTML = () => {
-    mainContainer.innerHTML = demoBandits()
+   mainContainer.innerHTML = demoBandits()
 }
 
 renderAllHTML()
