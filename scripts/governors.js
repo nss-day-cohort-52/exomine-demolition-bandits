@@ -15,7 +15,7 @@ document.addEventListener(
 
 
 export const governorList = () => {
-    let html = "<h2>Governors</h2>"
+    let html = "<h2>Choose a governors</h2>"
     html += `<select id="governors">`
     
     html += `<option value="0">Select A Governor...</option>`

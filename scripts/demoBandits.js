@@ -39,7 +39,7 @@ export const demoBandits = () => {
             </section>
 
         </article>
-            <button id="Purchase Mineral">Space Cart</button>
+            <button id="Space Cart">Purchase Mineral</button>
         </article>
 
         <article class="radioMinerals>
