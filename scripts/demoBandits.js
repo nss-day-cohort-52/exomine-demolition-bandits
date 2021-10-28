@@ -50,7 +50,7 @@ export const demoBandits = () => {
         <article class="cart">
             <section>
                 <h2>Cart</h2>
-                $ {}
+                <button>Purchase Cart</button>
             </section>
         </acticle></fieldset></div>
 

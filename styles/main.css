@@ -12,6 +12,10 @@ ul {
     padding-inline-start: 0.25rem;
 }
 
+/* .minerals {
+  display:none;
+} */
+
 .fieldset-auto-width {
   float: left;
   width: 30%;

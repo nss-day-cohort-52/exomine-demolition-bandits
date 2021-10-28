@@ -3,6 +3,7 @@ import { getGovernors, setGovernors, getTransState } from "./database.js"
 
 // State variable (copy of the data)
 const governors = getGovernors()
+
 document.addEventListener(
     "change",
     (event) => {
