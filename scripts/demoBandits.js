@@ -27,14 +27,14 @@ export const demoBandits = () => {
             <section name="governor">
                 ${governorList()}
             </section>
-            <section>
+            <section id="facilities">
                 ${facilityChoices()}
             </section>
         </article>
 
         <article class="minerals">
             <section>
-                <h2>Minerals</h2>
+                <h2>Facility Minerals</h2>
                 ${chooseMinerals()}
             </section>
         </article>
