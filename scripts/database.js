@@ -20,8 +20,8 @@ const database = {
         { id: 8, amount: 1800, mineralId: 8, facilityId: 2 },
         { id: 9, amount: 27500, mineralId: 9, facilityId: 3 },
         { id: 10, amount: 100000, mineralId: 10, facilityId: 4 },
-        { id: 11, amount: 22000, mineralId: 11, facilityId: 5 },
-        { id: 12, amount: 500, mineralId: 12, facilityId: 6 }
+        { id: 11, amount: 22000, mineralId: 6, facilityId: 5 },
+        { id: 12, amount: 500, mineralId: 8, facilityId: 6 }
     ],
     governors: [
         { id: 1, name: "Ding-Dong", colonyId: 1, },
@@ -84,6 +84,7 @@ export const getTransState = () => {
 
 export const setFacilities = (id) => {
     database.transientState.facilityId = id
+    
 }
 
 
