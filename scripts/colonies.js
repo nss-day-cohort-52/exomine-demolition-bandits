@@ -3,37 +3,46 @@ import { getColonies, getGovernors, getMinerals, getTransState } from "./databas
 const colonies = getColonies()
 const governors = getGovernors()
 
-// document.addEventListener(
-//     "change",
-//     (event) => {
-//         if (event.target.name === "colony") {
-//             setColonies(parseInt(event.target.value))
-//         }
-//     }
-// )
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "colony") {
+            setColonies(parseInt(event.target.value))
+        }
+    }
+)
 
+// exporting/declaring colonyChoices
 export const colonyChoices = () => {
-    let html = ""
 
+// declaring the getGovernor var to return a list of governors
+// by executing the function getGovernor
     let getGovernor = getGovernors()
+
+//declaring the getMinerals var to return a list of minerals 
+// by executing the function getMinerals
     let getMineral = getMinerals()
+
+    //declaring the getMinerals var to return a list of minerals 
+// by executing the function getMinerals
     const state = getTransState()
     
+    //declaring var for finding governor. 
+    // initially this will be undefined, until a governor is selected
     const foundGovernorObj = getGovernor.find(
         (governorObj) => {
            return governorObj.id === state.governorId
         }
  
     )
-debugger
-    for (const colony of colonies) {
-        if (colony.id === foundGovernorObj.colonyId) {
-            html += `${colony.name}`
-        } else {
-            html += `"Colony Minerals"`
-        }
+
+    //iterating over a list of colonies to match with governor to return colony name.
+    for (let colony of colonies) {
+        if (foundGovernorObj && colony.id == foundGovernorObj.colonyId) {
+            return `${colony.name}`
+        } 
+        
     }
-
-return html += `${colony.name}`
-
+    //return string "colony materials" if no governor or colony is selected.
+    return "Colony Materials"
 }

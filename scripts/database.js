@@ -97,9 +97,9 @@ export const setMinerals = (id) => {
     database.transientState.mineralId = id
 }
 
-// export const setColonies = (id) => {
-//     database.transientState.colonyId = id
-// }
+export const setColonies = (id) => {
+    database.transientState.colonyId = id
+}
 
 // export const setFacility = (facilityId) => {
 //     database.transientState.selectedFacility = facilityId
