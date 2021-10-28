@@ -1,6 +1,6 @@
 //* Import provides access to facilities array data from the database module
 
-import { getFacilities, setFacilities } from "./database.js";
+import { getFacilities, setFacilities, getTransState } from "./database.js";
 
 const facilities = getFacilities()
 
@@ -14,15 +14,15 @@ document.addEventListener(
 )
 
 export const facilityChoices = () => {
+    const state = getTransState()
     let html = "<h2>Facilities</h2>"
 
-    html += `<select id="facilities">`
+    html += `<select id="facilities" value="${state.facilityId}>`
     html += `<option value="0">Select A Facility...</option>`
 
     for (const facility of facilities) {
-        html += `<option value="${facility.id}">${facility.name}</option>`
+        html += `<option ${facility.id === state.facilityId ? "selected" : ""} value="${facility.id}">${facility.name}</option>`
     }
-    html += "</select>"
-
+        html += "</select>"
     return html
 }
