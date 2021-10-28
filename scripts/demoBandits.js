@@ -37,21 +37,8 @@ export const demoBandits = () => {
                 <h2>Facility Minerals</h2>
                 ${chooseMinerals()}
             </section>
-<<<<<<< HEAD
+
         </article></fieldset></div>
-=======
-
-        </article>
-            <button id="Space Cart">Purchase Mineral</button>
-        </article>
-
-        <article class="radioMinerals>
-            <section>
-                <h2>Facility Minerals</h2>
-                $ {}
-            </section>
-        </article></fieldset>
->>>>>>> main
 
         <div><fieldset class="fieldset-set-right">
         <legend><h2>Purchase Your Mineral</h2></legend>
@@ -64,7 +51,7 @@ export const demoBandits = () => {
         <article class="cart">
             <section>
                 <h2>Cart</h2>
-                <button>Purchase Cart</button>
+                <button>Purchase Minerals</button>
             </section>
         </acticle></fieldset></div>
 
