@@ -5,6 +5,7 @@ import { governorList } from "./governors.js"
 import {  } from "./facilityMineral.js"
 import {  } from "./purchasedMinerals.js"
 import { chooseMinerals } from "./Minerals.js"
+import { mineralSelection} from "./purchasedMinerals.js"
 
 
 document.addEventListener(
@@ -40,6 +41,7 @@ export const demoBandits = () => {
 
         </article>
             <button id="Space Cart">Purchase Mineral</button>
+            
         </article>
 
         <article class="radioMinerals>
