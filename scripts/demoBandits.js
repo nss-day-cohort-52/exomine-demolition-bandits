@@ -10,14 +10,24 @@ import { chooseMinerals } from "./Minerals.js"
 import { mineralSelection} from "./purchasedMinerals.js"
 
 
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         if (event.target.name === "governor") {
+//             colonyChoices()
+//         }
+//     }
+// )
+
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "governor") {
-            colonyChoices()
+        if (event.target.id === "facilities") {
+            chooseFMinerals()
         }
     }
 )
+
 
 export const demoBandits = () => {
     return `
@@ -35,19 +45,13 @@ export const demoBandits = () => {
             </section>
         </article>
 
-        <article class="minerals">
-            <section>
-                <h2Minerals</h2>
-                ${chooseMinerals()}
-            </section>
+       
 
 
-        </article>
-            <button id="Space Cart">Purchase Mineral</button>
-        </article>
+    
 
         <article class="radioMinerals">
-            <section>
+            <section id="mineral">
                 <h2>Facility Minerals</h2>
                 ${chooseFMinerals()}
             </section>
@@ -64,7 +68,7 @@ export const demoBandits = () => {
 
         <article class="cart">
             <section>
-                <h2>Cart</h2>
+                <h2>Space Cart</h2>
                 <button>Purchase Minerals</button>
             </section>
         </acticle></fieldset></div>

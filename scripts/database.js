@@ -37,16 +37,16 @@ const database = {
         { id: 3, name: "Dagobah" },
     ],
     minerals: [
-        { id: 1, type: "Gold" },
-        { id: 2, type: "Silver" },
-        { id: 3, type: "Mercury" },
-        { id: 4, type: "Hermatite" },
-        { id: 5, type: "Goethite" },
-        { id: 6, type: "Pyrite" },
-        { id: 7, type: "Galena" },
-        { id: 8, type: "Sphalerite" },
-        { id: 9, type: "Baryte" },
-        { id: 10, type: "Quartz" }
+        { id: 1, type: "Gold", amount: 10000 },
+        { id: 2, type: "Silver", amount: 10000 },
+        { id: 3, type: "Mercury", amount: 10000 },
+        { id: 4, type: "Hermatite", amount: 10000 },
+        { id: 5, type: "Goethite", amount: 10000 },
+        { id: 6, type: "Pyrite", amount: 10000 },
+        { id: 7, type: "Galena", amount: 10000 },
+        { id: 8, type: "Sphalerite", amount: 10000 },
+        { id: 9, type: "Baryte", amount: 10000 },
+        { id: 10, type: "Quartz", amount: 10000 }
     ],
     purchasedMinerals: [
         { id: 1, colonyId: 1, mineralId: 1, facilityId: 1, governorId: 2, amountPurchased: 1 }
@@ -108,7 +108,7 @@ export const setColonies = (id) => {
 
 export const setFacilityMinerals = (facilityId) => {
     database.transientState.selectedFacility = facilityId
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    // document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
 // export const purchaseMineral = () => {
