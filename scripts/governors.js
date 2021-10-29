@@ -13,8 +13,8 @@ document.addEventListener(
 
 )
 
-    
-    
+
+
     export const governorList = () => {
         const state = getTransState()
         let html = "<h2>Choose a governors</h2>"

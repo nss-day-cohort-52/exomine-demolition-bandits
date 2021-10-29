@@ -2,9 +2,12 @@
 import { colonyChoices } from "./colonies.js"
 import { facilityChoices } from "./facilities.js"
 import { governorList } from "./governors.js"
+
 import { chooseFMinerals } from "./facilityMineral.js"
 import {  } from "./purchasedMinerals.js"
+
 import { chooseMinerals } from "./Minerals.js"
+import { mineralSelection} from "./purchasedMinerals.js"
 
 
 document.addEventListener(
@@ -18,10 +21,10 @@ document.addEventListener(
 
 export const demoBandits = () => {
     return `
-        <h1>Demo Bandits Space Shop</h1>
+        <center><h1>Demo Bandits Space Shop</h1></center>
             
-        <fieldset>
-        <legend>Mine Your Mineral</legend>
+        <div><fieldset class="fieldset-auto-width">
+        <legend><h2>Choose Your Mineral</h2></legend>
     
         <article class="dropdownMenus">
             <section id="governor">
@@ -38,6 +41,7 @@ export const demoBandits = () => {
                 ${chooseMinerals()}
             </section>
 
+
         </article>
             <button id="Space Cart">Purchase Mineral</button>
         </article>
@@ -47,9 +51,12 @@ export const demoBandits = () => {
                 <h2>Facility Minerals</h2>
                 ${chooseFMinerals()}
             </section>
+
         </article></fieldset>
 
-        <article class="colonies">
+        <div><fieldset class="fieldset-set-right">
+        <legend><h2>Purchase Your Mineral</h2></legend>
+            <article class="colonies">
             <section>
                 <h2>Colonies</h2>
                 ${colonyChoices()}
@@ -58,9 +65,9 @@ export const demoBandits = () => {
         <article class="cart">
             <section>
                 <h2>Cart</h2>
-                $ {}
+                <button>Purchase Minerals</button>
             </section>
-        </acticle>
+        </acticle></fieldset></div>
 
 
 
