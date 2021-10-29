@@ -84,14 +84,17 @@ export const getTransState = () => {
 
 export const setFacilities = (id) => {
     database.transientState.facilityId = id
+    document.dispatchEvent(new CustomEvent("stateChanged"))
     
 }
+
 
 
 export const setGovernors = (id) => {
     database.transientState.governorId = id
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
+
 
 
 export const setMinerals = (id) => {
@@ -103,10 +106,10 @@ export const setColonies = (id) => {
     database.transientState.colonyId = id
 }
 
-// export const setFacility = (facilityId) => {
-//     database.transientState.selectedFacility = facilityId
-//     document.dispatchEvent(new CustomEvent("stateChanged"))
-// }
+export const setFacilityMinerals = (facilityId) => {
+    database.transientState.selectedFacility = facilityId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
 
 // export const purchaseMineral = () => {
 

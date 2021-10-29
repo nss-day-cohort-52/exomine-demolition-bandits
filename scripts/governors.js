@@ -13,11 +13,6 @@ document.addEventListener(
 
 )
 
-
-
-    
-
-    )
     
     
     export const governorList = () => {
