@@ -54,6 +54,27 @@ const database = {
     transientState: { },
 }
 
+export const addPurchasedMinerals = () => {
+    // Copy the current state of user choices
+    const newOrder = {...database.transientState}
+
+    // Add a new primary key to the object
+    const lastIndex = database.purchasedMinerals.length - 1
+    //setting newOrder.id to be the id of last order in customOrder list +1 
+    newOrder.id = database.purchasedMinerals[lastIndex].id + 1
+
+    // Add a timestamp to the order
+    newOrder.timestamp = Date.now()
+
+    // Add the new order object to custom orders state
+    database.purchasedMinerals.push(newOrder)
+
+    // Reset the temporary state for user choices
+    database.transientState = {}
+
+    // Broadcast a notification that permanent state has changed
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
 export const getFacilities = () => {
     return database.facilities.map(facility => ({ ...facility }))
 }
@@ -108,7 +129,7 @@ export const setColonies = (id) => {
 
 export const setFacilityMinerals = (facilityId) => {
     database.transientState.selectedFacility = facilityId
-    // document.dispatchEvent(new CustomEvent("stateChanged"))
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
 // export const purchaseMineral = () => {
