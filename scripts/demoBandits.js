@@ -7,7 +7,7 @@ import { chooseFMinerals } from "./facilityMineral.js"
 import {  } from "./purchasedMinerals.js"
 
 import { chooseMinerals } from "./Minerals.js"
-import { mineralSelection} from "./purchasedMinerals.js"
+import { mineralSelection } from "./purchasedMinerals.js"
 
 
 // document.addEventListener(
@@ -69,9 +69,10 @@ export const demoBandits = () => {
         <article class="cart">
             <section>
                 <h2>Space Cart</h2>
+                    ${mineralSelection()}
                 <button>Purchase Minerals</button>
             </section>
-        </acticle></fieldset></div>
+        </article></fieldset></div>
 
 
 
