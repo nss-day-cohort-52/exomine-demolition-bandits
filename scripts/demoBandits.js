@@ -2,8 +2,10 @@
 import { colonyChoices } from "./colonies.js"
 import { facilityChoices } from "./facilities.js"
 import { governorList } from "./governors.js"
-import { } from "./facilityMineral.js"
-import { } from "./purchasedMinerals.js"
+
+import { chooseFMinerals } from "./facilityMineral.js"
+import {  } from "./purchasedMinerals.js"
+
 import { chooseMinerals } from "./Minerals.js"
 import { mineralSelection} from "./purchasedMinerals.js"
 
@@ -35,9 +37,21 @@ export const demoBandits = () => {
 
         <article class="minerals">
             <section>
-                <h2>Facility Minerals</h2>
+                <h2Minerals</h2>
                 ${chooseMinerals()}
             </section>
+
+
+        </article>
+            <button id="Space Cart">Purchase Mineral</button>
+        </article>
+
+        <article class="radioMinerals">
+            <section>
+                <h2>Facility Minerals</h2>
+                ${chooseFMinerals()}
+            </section>
+
         </article></fieldset>
 
         <div><fieldset class="fieldset-set-right">
