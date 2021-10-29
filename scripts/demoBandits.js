@@ -35,7 +35,7 @@ export const demoBandits = () => {
 
         <article class="minerals">
             <section>
-                <h2>Facility Minerals</h2>
+                <h2>Choose a facility</h2>
                 ${chooseMinerals()}
             </section>
         </article></fieldset>
@@ -44,14 +44,15 @@ export const demoBandits = () => {
         <legend><h2>Purchase Your Mineral</h2></legend>
             <article class="colonies">
             <section>
-                <h2>Colonies</h2>
+                <h2>Colony Minerals</h2>
                 ${colonyChoices()}
             </section></article>
 
         <article class="cart">
             <section>
-                <h2>Cart</h2>
+                <h2>Space Cart</h2>
                 <button>Purchase Minerals</button>
+                ${mineralSelection()}
             </section>
         </acticle></fieldset></div>
 

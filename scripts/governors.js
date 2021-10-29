@@ -15,7 +15,7 @@ document.addEventListener(
 
     export const governorList = () => {
         const state = getTransState()
-        let html = "<h2>Choose a governors</h2>"
+        let html = "<h2>Choose a governor</h2>"
         
     html += `<select id="governors" value="${state.governorId}">`
 
