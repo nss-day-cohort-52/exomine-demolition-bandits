@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { getMinerals, setMinerals } from './database.js'
+=======
+import { getMinerals, setMinerals  } from './database.js'
+>>>>>>> main
 
 
 const minerals = getMinerals() // declare a const variabel and assign to it the value of the getMinerals() function

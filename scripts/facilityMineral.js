@@ -1,6 +1,6 @@
 //* Import provides access to facilityMineral array data from the database module
 
-import { getFacilityMinerals, getMinerals, getFacilities, getTransState, setMinerals } from "./database.js";
+import { getFacilityMinerals, getMinerals, setFacilityMinerals, getTransState, setMinerals } from "./database.js";
 
 const mineral = getMinerals()
 
@@ -8,12 +8,12 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "mineral") {
-            setMinerals(parseInt(event.target.value))
+            setFacilityMinerals(parseInt(event.target.value))
         }
     }
 )
 
-export const facilityChoices = () => {
+export const chooseFMinerals = () => {
 
     const getFacilityMineral = getFacilityMinerals()
 
@@ -23,12 +23,12 @@ export const facilityChoices = () => {
 
     const foundMineralObj = getMineral.find(
         (mineralObj) => {
-           return mineralObj.type === state.mineralType
+           return mineralObj.id === state.mineralId
         }
  
     )
     for (let facilityMineral of getFacilityMineral) {
-        if (foundMineralObj && facilityMineral.id == foundMineralObj.type) {
+        if (foundMineralObj && facilityMineral.id == foundMineralObj.id) {
             return `${mineral.type}`
         } 
         

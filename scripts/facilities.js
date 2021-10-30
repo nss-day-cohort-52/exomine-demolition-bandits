@@ -17,7 +17,7 @@ export const facilityChoices = () => {
     const state = getTransState()
     let html = "<h2>Facilities</h2>"
 
-    html += `<select id="facilities" value="${state.facilityId}>`
+    html += `<select id="facilities" value="${state.facilityId}">`
     html += `<option value="0">Select A Facility...</option>`
 
     for (const facility of facilities) {
